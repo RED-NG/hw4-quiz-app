@@ -22,11 +22,11 @@ var questions = [
 ];
 
 var startBtn = document.querySelector("#startBtn");
-var choices = document.querySelector(".btnChoice");
 var btn1 = document.querySelector("#choice1");
 var btn2 = document.querySelector("#choice2");
 var btn3 = document.querySelector("#choice3");
 var btn4 = document.querySelector("#choice4");
+var parentOfChoices = document.querySelector("#choices");
 var questionTitle = document.querySelector("#questionTitle");
 var questionIndex = 0;
 var choicesIndex = 0;
@@ -61,23 +61,23 @@ function newQuestion() {
 
 function newChoices() {
   if (choicesIndex < questions.length) {
-    btn1.innerHTML = questions[questionIndex].choices[0];
-    btn2.innerHTML = questions[questionIndex].choices[1];
-    btn3.innerHTML = questions[questionIndex].choices[2];
-    btn4.innerHTML = questions[questionIndex].choices[3];
+    btn1.innerHTML = questions[choicesIndex].choices[0];
+    btn2.innerHTML = questions[choicesIndex].choices[1];
+    btn3.innerHTML = questions[choicesIndex].choices[2];
+    btn4.innerHTML = questions[choicesIndex].choices[3];
     choicesIndex++;
   }
 }
 
-console.log(questions[questionIndex].question);
+parentOfChoices.addEventListener("click", clickedChoices, false);
 
-for (var i = 0; i < choices.length; i++) {
-  choices[i].addEventListener("click", function() {
-    if (choices[0].innerHTML === questions[0].answer) {
-    } else {
-    }
+function clickedChoices(e) {
+  if (e.target !== e.currentTarget) {
+    var clickedItem = e.target.id;
+    newChoices();
     newQuestion();
-  });
+  }
+  e.stopPropagation();
 }
 
 //timer ticking
