@@ -1,0 +1,38 @@
+body {
+  background-color: #dfdce3;
+}
+
+#disclaimerDiv {
+  text-align: center;
+}
+
+#disclaimer {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 550px;
+  border-style: dotted;
+  border-width: 2px;
+  background-color: white;
+}
+
+.buttonDiv {
+  padding: 2rem;
+  text-align: center;
+}
+
+.containerTimer {
+  text-align: center;
+}
+
+#timer {
+  font-size: 3rem;
+  display: inline-block;
+  width: auto;
+  background-color: WHITE;
+  border-radius: 100%;
+  border-style: dotted;
+  margin-top: 2em;
+  width: 90px;
+  height: 90px;
+}

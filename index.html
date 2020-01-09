@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mx-auto">Welcome to my quiz app!</span>
+    </nav>
+
+    <div id="disclaimerDiv">
+      <p id="disclaimer">
+        You have 45 seconds to complete the quiz. Final scores will be
+        determined by the amount of time remaining. For every wrong answer, 10
+        seconds will be deducted from the timer. When all questions have been
+        answered or when the timer runs out, the quiz will end. Press start to
+        begin the quiz!
+      </p>
+    </div>
+
+    <div class="buttonDiv">
+      <button id="startBtn" class="btn btn-dark">Start quiz!</button>
+    </div>
+
+    <div id="questionWrap">
+      <div id="questionTitle"></div>
+      <div id="choices">
+        <button class="btnChoice" id="choice1">Choice 1</button>
+        <button class="btnChoice" id="choice2">Choice 2</button>
+        <button class="btnChoice" id="choice3">Choice 3</button>
+        <button class="btnChoice" id="choice4">Choice 4</button>
+      </div>
+    </div>
+
+    <div id="endScreen">
+      <h1>All done!</h1>
+      <p id="playerScore">Your final score is</p>
+      <textarea></textarea>
+      <div class="buttonDiv">
+        <button id="endBtn" class="btn btn-dark">Record your score!</button>
+      </div>
+    </div>
+
+    <div class="clearTime">
+      <div class="containerTimer">
+        <p id="timer">45</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
