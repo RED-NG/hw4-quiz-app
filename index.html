@@ -21,16 +21,17 @@
 
     <div id="disclaimerDiv">
       <p id="disclaimer">
-        You have 45 seconds to complete the quiz. Final scores will be
-        determined by the amount of time remaining. For every wrong answer, 10
+        You have 75 seconds to complete the quiz. Final scores will be
+        determined by the amount of time remaining. For every wrong answer, 15
         seconds will be deducted from the timer. When all questions have been
-        answered or when the timer runs out, the quiz will end. Press start to
-        begin the quiz!
+        answered or when the timer runs out, the quiz will end and you will have
+        an opportunity to record your score. Press start to begin the quiz!
       </p>
     </div>
 
     <div class="buttonDiv">
       <button id="startBtn" class="btn btn-dark">Start quiz!</button>
+      <button id="highScores" class="btn btn-dark">High Scores</button>
     </div>
 
     <div id="questionWrap">
@@ -43,12 +44,9 @@
       </div>
     </div>
 
-    <div id="responseResult"></div>
-
     <div id="endScreen">
-      <h1>All done!</h1>
-      <p id="playerScore">Your final score is</p>
-      <textarea></textarea>
+      <h1><u>GAME OVER!</u></h1>
+      <p id="playerScore"></p>
       <div class="buttonDiv">
         <button id="endBtn" class="btn btn-dark">Record your score!</button>
       </div>
@@ -56,9 +54,11 @@
 
     <div class="clearTime">
       <div class="containerTimer">
-        <p id="timer">45</p>
+        <p id="timer">75</p>
       </div>
     </div>
+
+    <div id="result"></div>
 
     <script src="script.js"></script>
   </body>
