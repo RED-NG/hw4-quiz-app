@@ -48,7 +48,9 @@
       <h1><u>GAME OVER!</u></h1>
       <p id="playerScore"></p>
       <div class="buttonDiv">
-        <button id="endBtn" class="btn btn-dark">Record your score!</button>
+        Name: <input id="name" />
+        <button id="endBtn" class="btn btn-dark">Submit</button>
+        <button id="tryAgainBtn" class="btn btn-dark">Try Again</button>
       </div>
     </div>
 
@@ -59,6 +61,42 @@
     </div>
 
     <div id="result"></div>
+
+    <div class="scores-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td id="firstName">Mark</td>
+            <td id="userScore">57</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>20</td>
+          </tr>
+          <tr class="tableRow"></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <tr class="tableRowClone">
+      <th id="number" scope="row"></th>
+      <td id="name"></td>
+      <td id="score"></td>
+    </tr>
 
     <script src="script.js"></script>
   </body>
